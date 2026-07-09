@@ -8,15 +8,18 @@ import {
 
 import DashboardLayout from "../../components/layout/DashboardLayout";
 import DashboardCard from "../../components/dashboard/DashboardCard";
+import DashboardHeader from "../../components/dashboard/DashboardHeader";
+import RecentCourses from "../../components/dashboard/RecentCourses";
+import LearningProgress from "../../components/dashboard/LearningProgress";
 
 const Dashboard = () => {
   return (
     <DashboardLayout>
 
-      <h2 className="mb-4">
-        Student Dashboard
-      </h2>
+      {/* Header */}
+      <DashboardHeader />
 
+      {/* Dashboard Cards */}
       <div className="row">
 
         <DashboardCard
@@ -49,20 +52,15 @@ const Dashboard = () => {
 
       </div>
 
-      <div className="card shadow-sm mt-4">
+      {/* Bottom Section */}
+      <div className="row mt-4">
 
-        <div className="card-body">
+        <div className="col-lg-8">
+          <RecentCourses />
+        </div>
 
-          <h4>
-            Welcome to EduLearn 🎓
-          </h4>
-
-          <p className="text-muted">
-            This is your dashboard.
-            Here you'll see courses, notes,
-            assignments and learning progress.
-          </p>
-
+        <div className="col-lg-4">
+          <LearningProgress />
         </div>
 
       </div>
