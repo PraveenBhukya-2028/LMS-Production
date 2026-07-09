@@ -46,14 +46,6 @@ const Sidebar = () => {
             <span>My Courses</span>
           </NavLink>
         </li>
-
-        <li>
-          <NavLink to="/student/videos">
-            <FaVideo />
-            <span>Videos</span>
-          </NavLink>
-        </li>
-
         <li>
           <NavLink to="/student/notes">
             <FaStickyNote />

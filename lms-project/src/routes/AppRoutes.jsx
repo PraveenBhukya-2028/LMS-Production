@@ -3,7 +3,11 @@ import { Routes, Route, Navigate } from "react-router-dom";
 
 import Login from "../pages/auth/Login";
 import Register from "../pages/auth/Register";
+
 import Dashboard from "../pages/student/Dashboard";
+import Courses from "../pages/student/Courses";
+import CourseDetails from "../pages/student/CourseDetails";
+import VideoPlayerPage from "../pages/student/VideoPlayerPage";
 
 import ProtectedRoute from "./ProtectedRoute";
 
@@ -17,7 +21,7 @@ const AppRoutes = () => {
         element={<Navigate to="/login" replace />}
       />
 
-      {/* Authentication Routes */}
+      {/* Authentication */}
       <Route
         path="/login"
         element={<Login />}
@@ -28,7 +32,7 @@ const AppRoutes = () => {
         element={<Register />}
       />
 
-      {/* Protected Student Dashboard */}
+      {/* Dashboard */}
       <Route
         path="/student/dashboard"
         element={
@@ -38,7 +42,37 @@ const AppRoutes = () => {
         }
       />
 
-      {/* Invalid Routes */}
+      {/* Courses */}
+      <Route
+        path="/student/courses"
+        element={
+          <ProtectedRoute>
+            <Courses />
+          </ProtectedRoute>
+        }
+      />
+
+      {/* Course Details */}
+      <Route
+        path="/student/course/:id"
+        element={
+          <ProtectedRoute>
+            <CourseDetails />
+          </ProtectedRoute>
+        }
+      />
+
+      {/* Video Learning */}
+      <Route
+        path="/student/course/:courseId/learn"
+        element={
+          <ProtectedRoute>
+            <VideoPlayerPage />
+          </ProtectedRoute>
+        }
+      />
+
+      {/* Invalid Route */}
       <Route
         path="*"
         element={<Navigate to="/login" replace />}
