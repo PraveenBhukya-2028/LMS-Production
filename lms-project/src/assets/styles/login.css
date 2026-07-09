@@ -1,0 +1,150 @@
+body{
+    margin:0;
+    padding:0;
+    background:#f7f8fc;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.login-page{
+    background:#f7f8fc;
+}
+
+.banner-section{
+    background:#f3f2ff;
+}
+
+.login-banner{
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    height:100%;
+
+    padding:40px;
+
+}
+
+.brand{
+
+    text-align:center;
+
+}
+
+.logo-icon{
+
+    font-size:70px;
+
+    color:#6c4df6;
+
+}
+
+.brand h1{
+
+    font-size:48px;
+
+    font-weight:bold;
+
+    color:#222;
+
+}
+
+.brand h1::first-letter{
+
+    color:#6c4df6;
+
+}
+
+.brand p{
+
+    color:#666;
+
+    font-size:18px;
+
+}
+
+.banner-image img{
+
+    width:280px;
+
+    margin:40px 0;
+
+}
+
+.quote{
+
+    text-align:center;
+
+    color:#666;
+
+    max-width:350px;
+
+}
+
+.quote p{
+
+    font-style:italic;
+
+}
+
+.login-card{
+
+    width:480px;
+
+    border:none;
+
+    border-radius:18px;
+
+    padding:20px;
+
+}
+
+.login-card input{
+
+    height:52px;
+
+}
+
+.login-card button{
+
+    height:52px;
+
+}
+
+.form-control{
+
+    border-radius:10px;
+
+}
+
+.input-group-text{
+
+    background:white;
+
+}
+
+.btn-primary{
+
+    border-radius:10px;
+
+    background:#6c4df6;
+
+    border:none;
+
+}
+
+.btn-primary:hover{
+
+    background:#5a3ff0;
+
+}
+
+a{
+
+    text-decoration:none;
+
+}
